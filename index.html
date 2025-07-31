@@ -1,106 +1,66 @@
 <!DOCTYPE html>
 <html lang="da">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auction Draft Forslag</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 0 20px;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-
-        h2, h3 {
-            color: #1a1a1a;
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 4px;
-        }
-
-        ul, ol {
-            padding-left: 20px;
-        }
-
-        ul li, ol li {
-            margin-bottom: 6px;
-        }
-
-        p {
-            margin-bottom: 16px;
-        }
-
-        em {
-            color: #666;
-        }
-
-        strong {
-            color: #000;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Auction Draft Regelsæt – FPL</title>
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 2rem; background-color: #f9f9f9; color: #333; }
+    h1, h2, h3 { color: #1a1a1a; }
+    ul { padding-left: 1.2rem; }
+    li { margin-bottom: 0.5rem; }
+    code { background: #eee; padding: 2px 4px; border-radius: 3px; }
+    .note { font-style: italic; color: #666; }
+  </style>
 </head>
 <body>
-    <h2>Hej Draft-spillere</h2>
-    <p><em>(Det er en lidt lang smøre)</em></p>
 
-    <h3>Ny sæson - Ny Draft-format?</h3>
-    <p>En ny Draft-sæson lurer lige rundt om hjørnet, og som tidligere hintet, kunne vi prøve at ændre lidt i Draft-systemet ved at køre en såkaldt <strong>auction-draft</strong>.</p>
+  <h1>Regelsæt for Auction Draft – Fantasy Premier League</h1>
 
-    <h3>Hvad er en auction-draft?</h3>
-    <ul>
-        <li>Alle får et budget, fx 100M, til køb af spillere.</li>
-        <li>Hver spiller er unik og sælges til højestbydende.</li>
-        <li>Eksempel: Salah udbydes til 14M (Fantasy-pris). Man byder, og højestbydende vinder.</li>
-        <li>Får en spiller ingen bud, køres en ekstra runde med 50% af Fantasy-prisen.</li>
-        <li>Ingen bud i anden runde? Spilleren ryger i waiver.</li>
-        <li>Alle spillere fordeles indtil der er 15 på hvert hold.</li>
-    </ul>
+  <h2>1. Grundopsætning</h2>
+  <ul>
+    <li>Hver manager får et fast budget (fx <strong>£200</strong>).</li>
+    <li>Hvert hold består af 15 spillere (2 målmænd, 5 forsvarere, 5 midtbaner, 3 angribere).</li>
+    <li>Ingen spiller kan ejes af mere end ét hold.</li>
+    <li>Minimumsbuddet for en spiller er <strong>£1</strong>.</li>
+  </ul>
 
-    <h3>Sådan foregår budgivningen</h3>
-    <ul>
-        <li>Spillerne udbydes efter Draft-ranking.</li>
-        <li>Bud afgives på tur, fx rundt om et bord.</li>
-        <li>Ønsker du ikke at byde? Meld "pas".</li>
-        <li>Der gives 30 sekunder til at overveje/budde.</li>
-        <li>Bruger du hele dit budget tidligt, vælger du resten af dine spillere fra restpuljen bagefter.</li>
-        <li>Mindstepris på en spiller er 1M (bruges primært i de sidste runder).</li>
-    </ul>
+  <h2>2. Nominering og budgivning</h2>
+  <ul>
+    <li>Managerne nominerer spillere på skift i en fast eller "snake"-rækkefølge.</li>
+    <li>En nomineret spiller starter på <strong>£1</strong>, hvorefter alle kan byde.</li>
+    <li>Den højeste budgiver vinder spilleren og beløbet trækkes fra deres budget.</li>
+    <li>Man kan ikke byde mere end sit nuværende budget <strong>minus £1 for hver tom plads</strong> på holdet.</li>
+  </ul>
 
-    <h3>Efter auktionen</h3>
-    <ul>
-        <li>Vi tilmelder os Draften som normalt.</li>
-        <li>Draft-rækkefølgen ændres, så man får de spillere man har købt.</li>
-        <li>Systemet tildeler automatisk spillerne uafhængigt af draft-rækkefølge (eventuelle fejl kan fikses med trades).</li>
-    </ul>
+  <h2>3. Når en manager kun har én plads tilbage</h2>
+  <ul>
+    <li>Manageren må maksimalt bruge det beløb, der efterlader <strong>£1 per resterende plads</strong>.</li>
+    <li>Ved kun én plads tilbage skal man have mindst <strong>£1</strong> til rådighed.</li>
+  </ul>
 
-    <h3>Waiver-regelændring</h3>
-    <ul>
-        <li><strong>1. waiver-runde:</strong> Ingen spillere må vælges.</li>
-        <li>Fra <strong>2. waiver-runde</strong> gælder normal rækkefølge (laveste placering vælger først).</li>
-    </ul>
+  <h2>4. Særligt scenarie: To managere med £1 og én plads tilbage</h2>
+  <ul>
+    <li>Hvis både Manager 1 og Manager 2 kun har <strong>£1 tilbage</strong> og én plads:</li>
+    <li>Manageren der nominerer får automatisk spilleren til £1, da ingen kan overbyde.</li>
+    <li><strong>Nominering = ejerskab</strong>, når der ikke er penge til at byde op.</li>
+    <li>Den anden manager må vælge blandt de resterende spillere på sin næste nominering.</li>
+  </ul>
 
-    <h3>Fordele</h3>
-    <ul>
-        <li>Draft-rækkefølgen og dens tilfældighed elimineres.</li>
-        <li>Man kan lægge sin egen strategi.</li>
-        <li>De gode egenskaber fra draft beholdes.</li>
-        <li>Draft-day bliver forhåbentlig sjovere 🙂</li>
-    </ul>
+  <h2>5. Efter draften</h2>
+  <ul>
+    <li>Resten af sæsonen håndteres gennem waivers, byttehandler og fri agent tilgang.</li>
+    <li>Waivers kan køre som FAAB (blind budgivning med ugentlig budget, fx £100).</li>
+    <li>Trades tillades og kan kræve veto eller kommissær-godkendelse.</li>
+  </ul>
 
-    <h3>Udfordringer</h3>
-    <ul>
-        <li>Kræver forberedelse og forståelse for pengedelen.</li>
-        <li>Fysisk fremmøde er næsten nødvendigt for at gøre det sjovt.</li>
-        <li>Det kan være svært at finde en dag/aften før <strong>15. august</strong> hvor alle kan.</li>
-    </ul>
+  <h2>6. Valgfri husregler for avanceret spil</h2>
+  <ul>
+    <li>Randomiser sidste nomineringsrunde for at undgå uretfærdige fordele.</li>
+    <li>Indfør regel om, at man ikke må nominere ved kun £1 tilbage – automatisk tildeling i stedet.</li>
+    <li>Brug shared Google Sheet eller live tracking-værktøj til at følge budget og spillere.</li>
+  </ul>
 
-    <p>Hvor der er vilje, er der vej (og måske øl til).</p>
+  <p class="note">Dette regelsæt er designet til brug i uofficielle FPL-ligaer med auction draft-format.</p>
 
-    <h3>Hvad tænker I?</h3>
-    <p>
-        Giv jeres besyv med:
-        <ol>
-            <li
+</body>
+</html>
