@@ -18,6 +18,45 @@
 </head>
 <body>
 
+<script>
+  // Deadlines
+  const draftDeadline = new Date("August 15, 2025 19:30:00").getTime();
+  const seasonStart = new Date("August 15, 2025 21:00:00").getTime();
+
+  const draftTimerEl = document.getElementById("draftTimer");
+  const seasonTimerEl = document.getElementById("seasonTimer");
+
+  const countdownInterval = setInterval(function () {
+    const now = new Date().getTime();
+
+    // Draft Deadline Countdown
+    const draftDist = draftDeadline - now;
+    if (draftDist < 0) {
+      draftTimerEl.innerHTML = "Draft deadline er overskredet!";
+    } else {
+      const dDays = Math.floor(draftDist / (1000 * 60 * 60 * 24));
+      const dHours = Math.floor((draftDist % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const dMinutes = Math.floor((draftDist % (1000 * 60 * 60)) / (1000 * 60));
+      const dSeconds = Math.floor((draftDist % (1000 * 60)) / 1000);
+      draftTimerEl.innerHTML = `${dDays} dage, ${dHours} timer, ${dMinutes} min, ${dSeconds} sek`;
+    }
+
+    // Season Start Countdown
+    const seasonDist = seasonStart - now;
+    if (seasonDist < 0) {
+      seasonTimerEl.innerHTML = "Sæsonen er i gang!";
+      clearInterval(countdownInterval);
+    } else {
+      const sDays = Math.floor(seasonDist / (1000 * 60 * 60 * 24));
+      const sHours = Math.floor((seasonDist % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const sMinutes = Math.floor((seasonDist % (1000 * 60 * 60)) / (1000 * 60));
+      const sSeconds = Math.floor((seasonDist % (1000 * 60)) / 1000);
+      seasonTimerEl.innerHTML = `${sDays} dage, ${sHours} timer, ${sMinutes} min, ${sSeconds} sek`;
+    }
+  }, 1000);
+</script>
+
+  
   <h1>Regelsæt for Auction Draft – Fantasy Premier League</h1>
 
   <h2>1. Grundopsætning</h2>
@@ -79,7 +118,7 @@
 
   <!-- Draft Deadline Countdown -->
   <div style="margin-bottom: 30px;">
-    <h3>⏳ Deadline for Draft (15. aug kl. 19:30):</h3>
+    <h3>⏳ Startopstillinger låses (15. aug kl. 19:30):</h3>
     <div id="draftTimer" style="font-size: 1.8em; font-weight: bold; color: #cc0000;"></div>
   </div>
 
@@ -89,45 +128,6 @@
     <div id="seasonTimer" style="font-size: 1.8em; font-weight: bold; color: #333;"></div>
   </div>
 </div>
-
-<script>
-  // Deadlines
-  const draftDeadline = new Date("August 15, 2025 19:30:00").getTime();
-  const seasonStart = new Date("August 15, 2025 21:00:00").getTime();
-
-  const draftTimerEl = document.getElementById("draftTimer");
-  const seasonTimerEl = document.getElementById("seasonTimer");
-
-  const countdownInterval = setInterval(function () {
-    const now = new Date().getTime();
-
-    // Draft Deadline Countdown
-    const draftDist = draftDeadline - now;
-    if (draftDist < 0) {
-      draftTimerEl.innerHTML = "Draft deadline er overskredet!";
-    } else {
-      const dDays = Math.floor(draftDist / (1000 * 60 * 60 * 24));
-      const dHours = Math.floor((draftDist % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const dMinutes = Math.floor((draftDist % (1000 * 60 * 60)) / (1000 * 60));
-      const dSeconds = Math.floor((draftDist % (1000 * 60)) / 1000);
-      draftTimerEl.innerHTML = `${dDays} dage, ${dHours} timer, ${dMinutes} min, ${dSeconds} sek`;
-    }
-
-    // Season Start Countdown
-    const seasonDist = seasonStart - now;
-    if (seasonDist < 0) {
-      seasonTimerEl.innerHTML = "Sæsonen er i gang!";
-      clearInterval(countdownInterval);
-    } else {
-      const sDays = Math.floor(seasonDist / (1000 * 60 * 60 * 24));
-      const sHours = Math.floor((seasonDist % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const sMinutes = Math.floor((seasonDist % (1000 * 60 * 60)) / (1000 * 60));
-      const sSeconds = Math.floor((seasonDist % (1000 * 60)) / 1000);
-      seasonTimerEl.innerHTML = `${sDays} dage, ${sHours} timer, ${sMinutes} min, ${sSeconds} sek`;
-    }
-  }, 1000);
-</script>
-
 
 </body>
 </html>
